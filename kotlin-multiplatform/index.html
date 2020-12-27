@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Console Output</title>
+
+    <script type="text/javascript" src="build/js/packages_imported/kotlin/1.4.10/kotlin.js"></script>
+    <script type="text/javascript" src="build/js/packages/kotlin-multiplatform/kotlin/kotlin-multiplatform.js"></script>
+
+    <script>
+    function sum() {
+        var a,b,c;
+        a = Number(document.getElementById("first").value);
+        b = Number(document.getElementById("second").value);
+        c = kotlin-multiplatform.addAndSquareRoot_vux9f0$(a,b);
+        document.getElementById("answer").value= c;
+    }
+    </script>
+</head>
+<body>
+Enter the First number : <input id = "first">
+Enter the Second number: <input id = "second">
+<button onclick = "sum()"> Add </button>
+<input id = "answer">
+
+<input type="button" onclick="addAndSquareRoot()" value="run external javascript">
+</body>
+</html>
