@@ -9,6 +9,7 @@ repositories {
 }
 kotlin {
     jvm {
+        withJava()
         compilations.all {
             kotlinOptions.jvmTarget = "1.8"
         }
@@ -56,4 +57,5 @@ kotlin {
         val nativeMain by getting
         val nativeTest by getting
     }
+
 }

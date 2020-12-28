@@ -5,7 +5,7 @@ class ExtendedCalculatorNativeTest {
 
     @Test
     fun testAddAndDouble() {
-        assertEquals(2.0, addAndSquareRoot(2, 2))
+        assertEquals(2.0, addAndSquareRoot(2.0, 2.0))
     }
 
 }

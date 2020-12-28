@@ -5,7 +5,7 @@ class ExtendedCalculatorJSTest {
 
     @Test
     fun testAddAndSquareRoot() {
-        assertEquals(2.0, addAndSquareRoot(2, 2))
+        assertEquals(2.0, addAndSquareRoot(2.0, 2.0))
     }
 
 }

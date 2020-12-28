@@ -5,9 +5,7 @@ import react.RBuilder
 import react.RComponent
 import react.RProps
 import react.RState
-import styled.css
-import styled.styledDiv
-import styled.styledInput
+import styled.*
 import kotlin.math.sqrt
 
 external interface CalculatorProps : RProps {
@@ -17,17 +15,25 @@ external interface CalculatorProps : RProps {
 data class CalculatorState(val value: String) : RState
 
 @JsExport
-class Welcome(props: CalculatorProps) : RComponent<CalculatorProps, CalculatorState>(props) {
+class Calculator(props: CalculatorProps) : RComponent<CalculatorProps, CalculatorState>(props) {
 
     init {
         state = CalculatorState(props.value)
     }
 
     override fun RBuilder.render() {
+        styledLabel {
+            css {
+                +CalculatorStyles.textLabel
+            }
+            + "Enter a Number: "
+        }
+
         styledInput {
             css {
                 +CalculatorStyles.textInput
             }
+
             attrs {
                 type = InputType.number
                 value = state.value
@@ -43,8 +49,8 @@ class Welcome(props: CalculatorProps) : RComponent<CalculatorProps, CalculatorSt
             css {
                 +CalculatorStyles.textContainer
             }
-            +"Square Root: ${
-                sqrt(state.value.toDouble())}"
+            +"Square of the Input: ${
+                state.value.toDouble()*state.value.toDouble()}"
         }
     }
 }
