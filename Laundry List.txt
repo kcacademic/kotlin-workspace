@@ -3,3 +3,5 @@ Coroutines & Channels [https://play.kotlinlang.org/hands-on/Introduction%20to%20
 Kotlin Native [https://play.kotlinlang.org/hands-on/Introduction%20to%20Kotlin%20Native/01_Introduction]
 Kotlin Flow [https://spring.io/blog/2019/04/12/going-reactive-with-spring-coroutines-and-kotlin-flow]
 
+Koin [https://insert-koin.io/]
+
